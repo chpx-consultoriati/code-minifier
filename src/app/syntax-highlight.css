@@ -1,0 +1,95 @@
+/* src/app/syntax-highlight.css */
+
+/* Estilos específicos para destacar a sintaxe do código minificado */
+.code-container {
+  background-color: #1a1a1a !important;
+  color: #e0e0e0 !important;
+  border-radius: 4px;
+  padding: 16px;
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  overflow-x: auto;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-all;
+  background-color: transparent !important;
+}
+
+/* Cores para destacar a sintaxe básica */
+.keyword {
+  color: #c586c0; /* Roxo para palavras-chave */
+}
+
+.string {
+  color: #ce9178; /* Laranja para strings */
+}
+
+.comment {
+  color: #6a9955; /* Verde para comentários */
+}
+
+.number {
+  color: #b5cea8; /* Verde claro para números */
+}
+
+.function {
+  color: #dcdcaa; /* Amarelo para funções */
+}
+
+.type {
+  color: #4ec9b0; /* Azul-esverdeado para tipos */
+}
+
+.variable {
+  color: #9cdcfe; /* Azul claro para variáveis */
+}
+
+.operator {
+  color: #d4d4d4; /* Cinza claro para operadores */
+}
+
+.punctuation {
+  color: #d4d4d4; /* Cinza claro para pontuação */
+}
+
+.bracket {
+  color: #ffd700; /* Dourado para colchetes/parênteses */
+}
+
+/* Estilo para nome de arquivos no código minificado */
+.file-path {
+  color: #569cd6; /* Azul para caminhos de arquivos */
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+  padding-bottom: 4px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+/* Ajustes para diferentes tipos de linguagens */
+.java .keyword { color: #569cd6; } /* Azul para palavras-chave Java */
+.java .type { color: #4ec9b0; } /* Azul-esverdeado para tipos Java */
+
+.javascript .keyword { color: #c586c0; } /* Roxo para palavras-chave JavaScript */
+.javascript .function { color: #dcdcaa; } /* Amarelo para funções JavaScript */
+
+.python .keyword { color: #569cd6; } /* Azul para palavras-chave Python */
+.python .function { color: #dcdcaa; } /* Amarelo para funções Python */
+
+.html .tag { color: #569cd6; } /* Azul para tags HTML */
+.html .attribute { color: #9cdcfe; } /* Azul claro para atributos HTML */
+
+.css .property { color: #9cdcfe; } /* Azul claro para propriedades CSS */
+.css .value { color: #ce9178; } /* Laranja para valores CSS */
+
+/* Estilo para a linha de separação entre arquivos */
+.file-separator {
+  margin: 16px 0;
+  border-top: 1px dashed rgba(255, 255, 255, 0.2);
+  width: 100%;
+}

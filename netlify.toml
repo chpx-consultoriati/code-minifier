@@ -1,0 +1,22 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+  
+[build.environment]
+  NODE_VERSION = "18"
+  NEXT_USE_NETLIFY_EDGE = "true"
+  NEXT_SKIP_API_ROUTES = "true"
+  
+# Configuração correta para funções
+[functions]
+  node_bundler = "esbuild"
+  # Defina o diretório onde estão suas funções, se necessário
+  directory = "netlify/functions"
+  
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+  
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

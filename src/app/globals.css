@@ -1,0 +1,130 @@
+/* src/app/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 30, 30, 30;
+  --background-end-rgb: 35, 35, 35;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  min-height: 100vh;
+}
+
+/* Estilizando scrollbars para tema escuro */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2d2d2d;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+/* Ajustes para o tema escuro nos componentes */
+.MuiListItemText-secondary {
+  color: #a0a0a0 !important;
+}
+
+pre {
+  background-color: #242424 !important;
+  color: #e0e0e0 !important;
+  border-radius: 4px;
+}
+
+.MuiDivider-root {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Ajustes no estilo de código minificado */
+.pre-container {
+  background-color: #242424 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Correção para áreas com background branco */
+.MuiPaper-root {
+  background-color: #2d2d2d !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.MuiInput-root,
+.MuiFilledInput-root,
+.MuiOutlinedInput-root {
+  background-color: rgba(30, 30, 30, 0.5) !important;
+  color: white !important;
+}
+
+.MuiBox-root [style*="background-color: rgb(248, 249, 250)"] {
+  background-color: #1e1e1e !important;
+}
+
+/* Forçar todas as áreas de upload a terem fundo escuro */
+input[type="file"]::file-selector-button {
+  background-color: #2d2d2d !important;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Ajuste de cores para mensagens de alerta */
+.MuiAlert-root.MuiAlert-standardSuccess {
+  background-color: rgba(76, 175, 80, 0.15);
+  color: #a5d6a7;
+}
+
+.MuiAlert-root.MuiAlert-standardError {
+  background-color: rgba(244, 67, 54, 0.15);
+  color: #ef9a9a;
+}
+
+.MuiAlert-root.MuiAlert-standardInfo {
+  background-color: rgba(33, 150, 243, 0.15);
+  color: #90caf9;
+}
+
+.MuiAlert-root.MuiAlert-standardWarning {
+  background-color: rgba(255, 152, 0, 0.15);
+  color: #ffcc80;
+}
+
+/* Ajustes específicos para o botão de upload */
+label[for="file-upload"] {
+  cursor: pointer;
+}
+
+.file-upload-area {
+  background-color: rgba(30, 30, 30, 0.5) !important; 
+  border: 2px dashed rgba(144, 202, 249, 0.3) !important;
+}
+
+/* Correção para elementos de formulário */
+.MuiFormLabel-root {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.MuiInputBase-input::placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
